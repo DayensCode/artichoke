@@ -8,13 +8,8 @@
 	--spacing: 6px;
 
 	--color: #000;
-	--radius: 4px;
+	--radius: 20%;
 
-	/* Fixed height and width */
-	/* height: var(--height); */
-	/* width: var(--width); */
-
-	/* Dynamic height and width */
 	height: calc(var(--line-height) * 3 + var(--spacing) * 2);
 	width: var(--width);
 
@@ -50,12 +45,10 @@
 }
 
 .nav-icon::before {
-	/* top: calc(var(--line-height) * -2); */
 	top: calc(-1 * (var(--line-height) + var(--spacing)));
 }
 
 .nav-icon::after {
-	/* top: calc(var(--line-height) * 2); */
 	top: calc(var(--line-height) + var(--spacing));
 }
 
@@ -78,15 +71,19 @@
 	transform: rotate(-45deg);
 }
 
-/* Layout */
-
 .mobile-nav-btn {
-	z-index: 999;
-	// display: none;
+	z-index: 3;
 }
 
 @media (max-width: 1300px) {
 	.mobile-nav-btn {
 		display: flex;
+	}	
+}
+
+@media (max-width: 640px) {
+	.mobile-nav-btn {
+		margin-right: 8px;
+		--width: 26px;
 	}	
 }

@@ -1,0 +1,97 @@
+.intro {
+
+	&__wrapper {
+		position: relative;
+		text-align: center;
+	}
+
+	&__video {
+		width: 100%;
+		height: 700px;
+		object-fit: cover;
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0 , 0.7);
+	}
+
+	&__info {
+		padding: 184px 0;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-align: center;
+	}
+
+	&__title {
+		color: #FFFFFF;
+		font-size: 72px;
+		margin: 0 auto;
+		width: 1120px;
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+
+	&__signature {
+		color: #DADADA;
+		font-size: 20px;
+		margin: 0 auto;
+		font-weight: 400;
+	}
+
+	&__button {
+		width: 320px;
+		height: 56px;
+		border-radius: 30px;
+		display: block;
+		margin: 0 auto;
+		color: #FFFFFF;
+		background-color: var(--accent);
+		margin-top: 40px;
+	}
+}
+
+@media (max-width: 1300px) {
+	.intro {
+	
+		&__video {
+			height: 687px;
+		}
+	
+		&__info {
+			padding: 170px 0;
+		}
+	
+		&__title {
+			width: 560px;
+			font-size: 54px;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.intro {
+	
+		&__video {
+			height: 584px;
+		}
+	
+		&__info {
+			padding: 139px 0;
+		}
+	
+		&__title {
+			width: 300px;
+			font-size: 34px;
+			margin-bottom: 20px;
+		}
+	}
+}
