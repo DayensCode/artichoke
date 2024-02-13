@@ -11,7 +11,9 @@
 	&__list {
 		list-style: none;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);//здесь остановилась
+		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+		column-gap: 40px;
+		row-gap: 40px;
 	}
 }
 
@@ -21,6 +23,10 @@
 	
 		&__title {
 			margin-bottom: 40px;
+		}
+
+		&__list {
+			grid-template-columns: repeat(auto-fill, minmax(319px, 1fr));
 		}
 	}
 }
@@ -32,6 +38,11 @@
 		&__title {
 			font-size: 30px;
 			margin-bottom: 30px;
+		}
+
+		&__list {
+			column-gap: 30px;
+			row-gap: 30px;
 		}
 	}
 }
