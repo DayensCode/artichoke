@@ -4,10 +4,6 @@
 	&__parts {
 		display: flex;
 		justify-content: space-between;
-
-		img {
-			width: 62%;
-		}
 	}
 
 	&__wrapper {
@@ -16,14 +12,14 @@
 }
 
 
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
 	.cta__parts {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 
 		img {
-			width: 100%;
+			width: 100vw;
 		}
 	}
 
