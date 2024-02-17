@@ -4,6 +4,7 @@
 	text-align: center;
 
 	&__title {
+		cursor: default;
 		font-size: 40px;
 		margin-bottom: 48px;
 	}
@@ -11,7 +12,7 @@
 	&__list {
 		list-style: none;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(321px, 1fr));
 		column-gap: 40px;
 		row-gap: 40px;
 	}

@@ -1,5 +1,4 @@
 .container {
-	border: 1px solid red;
 	padding: 0 var(--container-padding);
 	max-width: var(--container-width);
 	margin: 0 auto;
@@ -15,4 +14,10 @@
 	.container {
 		padding: 0 35px;
 	}
+}
+
+.container-cta {
+	padding-left: calc(
+		(100% - var(--container-width)) / 2
+	);
 }

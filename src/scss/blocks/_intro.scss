@@ -37,6 +37,7 @@
 		width: 1120px;
 		font-weight: 600;
 		margin-bottom: 10px;
+		cursor: default;
 	}
 
 	&__signature {
@@ -44,6 +45,7 @@
 		font-size: 20px;
 		margin: 0 auto;
 		font-weight: 400;
+		cursor: default;
 	}
 
 	&__button {
@@ -55,6 +57,11 @@
 		color: #FFFFFF;
 		background-color: var(--accent);
 		margin-top: 40px;
+		transition: background-color .2s ease-in;
+
+		&:hover {
+			background-color: #33805B;
+		}
 	}
 }
 

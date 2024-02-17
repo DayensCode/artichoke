@@ -1,0 +1,118 @@
+@import './swiper-vars.scss';
+@at-root {
+  :root {
+    --swiper-navigation-size: 22px;
+    --swiper-navigation-top-offset: 50%;
+    --swiper-navigation-sides-offset: 0;
+    --swiper-navigation-color: #DADADA;
+
+  }
+}
+.swiper-button-prev,
+.swiper-button-next {
+  padding: 20px;
+  border-radius: 50%;
+
+  background-color: var(--accent);
+  position: absolute;
+  top: var(--swiper-navigation-top-offset, 50%);
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+  transition: background-color .3s linear;
+
+  &.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+  }
+
+  &.swiper-button-hidden {
+    opacity: 0;
+    cursor: auto;
+    pointer-events: none;
+  }
+
+  .swiper-navigation-disabled & {
+    display: none !important;
+  }
+
+  svg {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    transform-origin: center;
+  }
+
+  .swiper-rtl & svg {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    background-color: #33805B;
+  }
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: var(--swiper-navigation-sides-offset, 10px);
+  right: auto;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset, 10px);
+  left: auto;
+}
+
+.swiper-button-lock {
+  display: none;
+}
+
+/* Navigation font start */
+.swiper-button-prev,
+.swiper-button-next {
+  &:after {
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+  }
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  &:after {
+    content: 'prev';
+    margin-top: 2px;
+    margin-right: 4px;
+  }
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  &:after {
+    content: 'next';
+    margin-top: 2px;
+    margin-left: 4px;
+  }
+  right: var(--swiper-navigation-sides-offset, 10px);
+  left: auto;
+}
+/* Navigation font end */
+
+.swiper-button-prev {
+  margin-left: 20px;
+}
+
+.swiper-button-next {
+  margin-right: 20px;
+}
